@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color gradient creator</title>
+	<script src="/gradient_creator.js"></script>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+		integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<div class="container">
+		<h3>Create a HEX Gradient</h3>
+		<p>To produce the best looking gradients use either:</p>
+		<ul>
+			<li>combinations of red and green (with little or no blue) or</li>
+			<li>combinations of green and blue (with little or no red) or</li>
+			<li>greyscales (where red = green = blue)</li>
+		</ul>
+		<div class="row">
+			<div class="one-half column">
+				<h5>Select starting color</h5>
+				<label for="red">Red</label><input type="range" name="red" id="red" value="95" oninput="selectInitialColor()">
+				<label for="green">Green</label><input type="range" name="green" id="green" value="50"
+					oninput="selectInitialColor()">
+				<label for="blue">Blue</label><input type="range" name="blue" id="blue" value="0"
+					oninput="selectInitialColor()">
+			</div>
+			<div class="one-half column">
+				<div id="initial_color"
+					style="width: 200px; height: 200px; border: 1px solid black; background-color: rgb(242, 128, 0);"></div>
+			</div>
+		</div>
+		<h5>Select the number of colors in your gradient</h5>
+		<select name="gradients" id="gradient_select" onchange="createGradient(this)">
+			<option value="1"></option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+		</select>
+		<div id="color_gradients"></div>
+		<div style="float: left;"></div>
+	</div>
+</body>
+
+</html>
