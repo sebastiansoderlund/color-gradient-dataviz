@@ -1,7 +1,7 @@
 # color-gradient-dataviz
 *Generating color gradients (in HEX values) for data visualization.*
 
-[Gradient creator]()
+https://sebastiansoderlund.github.io/color-gradient-dataviz/
 
 ## Tips on selecting colors for data viz:
 
